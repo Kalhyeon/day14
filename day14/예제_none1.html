@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국어 영어 성적 합격/불합격 여부 확인</title>
+</head>
+<body>
+  <input placeholder="국어 성적 입력" id="kor">
+  <input placeholder="영어 성적 입력" id="eng">
+  <button onclick="합격여부확인();">합격/불합격 여부 확인</button>
+  <p id="check"></p>
+  <script>
+  function 합격여부확인() {
+    const kor = document.querySelector('#kor').value;
+    const eng = document.querySelector('#eng').value;
+    if(kor >= 70 && eng >= 70) {
+      document.querySelector('#check').innerHTML='합격';
+    }else {
+      document.querySelector('#check').innerHTML='불합격';
+    }
+  }
+  </script>
+</body>
+</html>

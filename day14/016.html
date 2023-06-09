@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- 교궁에 입장하려고 한다. 나이를 입력받아 6세 이하이면 무료, 7~18세이면 1,000원
+    , 19세 이상이면 2,000원이다. 나이를 입력받아 입장료를 출력하시오 -->
+<body>
+  <script>
+    const age = prompt('교궁에 입장하기 전에 나이를 입력하세요.');
+    if(age <= 6) {
+      document.write(`나이가 ${age}세 이므로 무료입니다.`)
+    }else if(age >= 7 && age <= 18) {
+      document.write(`나이가 ${age}세 이므로 1,000원 입니다.`);
+    }else {
+      document.write(`나이가 ${age}세 이므로 2,000원 입니다.`);
+    }
+  </script>
+</body>
+</html>

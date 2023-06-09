@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성인 여부 확인</title>
+</head>
+<body>
+  <input placeholder="나이 입력" id="age">
+  <!-- placeholder 는 input 으로 생성된 입력 창에 반 투명한 문장을 보이게 한다. -->
+  <button onclick="성인여부출력();">성인 여부 확인</button>
+  <p id="result"></p>
+  <script>
+    function 성인여부출력() {
+      const age = document.querySelector('#age').value;
+      if(age==="") {
+        alert('나이를 입력하세요.');
+        return; // age 에 아무것도 들어가지 않으면 alert 값을 return 한다.
+      }
+      if(age > 18) {
+        document.querySelector('#result').innerHTML='성인';
+      }else {
+        document.querySelector('#result').innerHTML='미성년자';
+      }
+    }
+  </script>
+</body>
+</html>
